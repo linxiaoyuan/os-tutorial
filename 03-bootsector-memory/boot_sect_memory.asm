@@ -35,7 +35,7 @@ int 0x10
 ; every time we change the code
 mov al, "4"
 int 0x10
-mov al, [0x7c2d]
+mov al, [0x7c2e]
 int 0x10
 
 
@@ -45,6 +45,7 @@ the_secret:
     ; ASCII code 0x58 ('X') is stored just before the zero-padding.
     ; On this code that is at byte 0x2d (check it out using 'xxd file.bin')
     db "X"
+    db "j"
 
 ; zero padding and magic bios number
 times 510-($-$$) db 0
