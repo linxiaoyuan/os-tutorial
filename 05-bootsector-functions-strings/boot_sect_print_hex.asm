@@ -27,7 +27,7 @@ step2:
     mov bx, HEX_OUT + 5 ; base + length
     sub bx, cx  ; our index variable
     mov [bx], al ; copy the ASCII char on 'al' to the position pointed by 'bx'
-    ror dx, 4 ; 0x1234 -> 0x4123 -> 0x3412 -> 0x2341 -> 0x1234
+    ror dx, 4 ; 0x1234 -> 0x4123 -> 0x3412 -> 0x2341 -> 0x1234   ;right shift >>
 
     ; increment index and loop
     add cx, 1
