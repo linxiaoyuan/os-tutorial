@@ -50,7 +50,8 @@ us define a "global offset" for every memory location, with the `org` command:
 ```nasm
 [org 0x7c00]
 ```
-
+org effect the label, like move bx, label, it will turn bx to add on org value.
+[bx] not add on org
 Go ahead and **open `boot_sect_memory_org.asm`** and you will see the canonical
 way to print data with the boot sector, which is now attempt 2. Compile the code
 and run it, and you will see how the `org` command affects each previous solution.

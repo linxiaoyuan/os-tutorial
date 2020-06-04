@@ -8,6 +8,8 @@ print:
 mov ah, 0x0e ;duplicate call if in start loop,move to here is ok
 start:
     mov al, [bx] ; 'bx' is the base address for the string
+    ;mov dx, bx
+    ;call print_hex
     cmp al, 0 
     je done
 
