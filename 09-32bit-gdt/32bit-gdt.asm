@@ -27,7 +27,7 @@ gdt_end:
 
 ; GDT descriptor
 gdt_descriptor:
-    dw gdt_end - gdt_start - 1 ; size (16 bit), always one less of its true size
+    dw gdt_end - gdt_start - 1 ; size (16 bit), always one less of its true size ； why one less？ 😂
     dd gdt_start ; address (32 bit)
 
 ; define some constants for later use
